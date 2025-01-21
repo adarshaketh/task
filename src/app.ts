@@ -1,14 +1,12 @@
 import express, { Application } from 'express';
-import dotenv from 'dotenv';
 import {connectDatabase} from './db';
-import { checkRequirments } from './helpers/env';
+import { checkRequirments, getDEVPort } from './helpers/env';
 const app: Application = express();
 
-dotenv.config()
 app.use(express.json());
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on http://localhost:${process.env.PORT}`);
+app.listen(getDEVPort(), () => {
+    console.log(`Server is running on http://localhost:${getDEVPort()}`);
   });
 
   (() => {
