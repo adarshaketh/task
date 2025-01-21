@@ -1,0 +1,26 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "API endpoint for user management",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "tsc --outDir build && node ./build/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adarshaketh/task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adarshaketh/task/issues"
+  },
+  "homepage": "https://github.com/adarshaketh/task#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}
