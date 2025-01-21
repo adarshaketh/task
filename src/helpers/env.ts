@@ -20,6 +20,15 @@ function getMongoURI():string{
     return URI;
 }
 
+function getDBName():string{
+    const dbName = process.env.DB_NAME;
+    if(!dbName){
+        console.log("DB Name is required in ENV")
+        return ""
+    }
+    return dbName;
+}
+
 function getDEVPort():number{
     try{
         const port = process.env.DEV_PORT;
@@ -35,7 +44,7 @@ function getDEVPort():number{
 }
 
 function checkRequirments():boolean{
-    if(!getJWTSecret()||!getMongoURI()||!getDEVPort()){
+    if(!getJWTSecret()||!getMongoURI()||!getDEVPort()||!getDBName()){
         return true;
     }
     return false;
